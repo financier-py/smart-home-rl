@@ -49,4 +49,4 @@ class ValIterSolver:
             if delta < self.theta:
                 break
 
-            return self.V, self.Policy
+        return self.V, self.Policy
