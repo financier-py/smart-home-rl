@@ -1,3 +1,5 @@
+# solver.py
+
 import numpy as np
 from env import SmartHomeEnv
 
@@ -39,7 +41,7 @@ class ValIterSolver:
                             best_val = exp_val
                             best_a = action
 
-                    V_new[t, b] = best_val
+                    V_new[t, b] = best_val + b * 2
                     self.Policy[t, b] = best_a
 
             delta = np.max(np.abs(self.V - V_new))
